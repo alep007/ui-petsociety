@@ -1,24 +1,34 @@
-import { ThemeProvider as MUIThemeProvider, createTheme, StyledEngineProvider } from "@mui/material/styles";
+import { ThemeProvider as MUIThemeProvider, createTheme, StyledEngineProvider, alpha } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { ERROR, GREY, INFO, PRIMARY, SUCCESS, WARNING } from "./colors";
 
 const ThemeProvider = ({ children }: any) => {
   // A custom theme for this app
   const theme = createTheme({
     typography: {
-      fontFamily: ["Roboto"].join(","),
+      fontFamily: "Poppins",
     },
     palette: {
-      primary: {
-        main: "#556cd6",
-      },
+      primary: PRIMARY,
       secondary: {
-        main: "#19857b",
+        main: "#f91983",
       },
-      error: {
-        main: red.A400,
+      error: ERROR,
+      warning: WARNING,
+      info: INFO,
+      success: SUCCESS,
+      divider: alpha(GREY[500], 0.24),
+      text: {
+        primary: GREY[800],
+        secondary: GREY[600],
+        disabled: GREY[500],
+      },
+      background: {
+        paper: "#fff",
+        default: GREY[100],
       },
     },
+    components: {},
   });
 
   return (
