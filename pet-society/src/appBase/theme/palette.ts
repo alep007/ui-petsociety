@@ -1,3 +1,5 @@
+import { alpha } from "@mui/material";
+
 export const GREY = {
   0: "#FFFFFF",
   100: "#F9FAFB",
@@ -64,3 +66,27 @@ export const SUCCESS = {
   darker: "#08660D",
   contrastText: GREY[800],
 };
+
+const palette = {
+  primary: PRIMARY,
+  secondary: {
+    main: "#f91983",
+  },
+  error: ERROR,
+  warning: WARNING,
+  info: INFO,
+  success: SUCCESS,
+  divider: alpha(GREY[500], 0.24),
+  grey: GREY,
+  text: {
+    primary: GREY[800],
+    secondary: GREY[600],
+    disabled: GREY[500],
+  },
+  background: {
+    paper: "#fff",
+    default: GREY[100],
+  },
+};
+
+export default palette;

@@ -1,6 +1,7 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import DashboardLayout from "../components/common/DashboardLayout";
 import Dashboard from "../components/dashboard/Dashboard";
+import PetsPage from "../components/pets/PetsPage";
 
 // ----------------------------------------------------------------------
 
@@ -12,7 +13,7 @@ export default function Routes() {
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: "app", element: <Dashboard /> },
-        // { path: "user", element: <UserPage /> },
+        { path: "pets", element: <PetsPage /> },
         // { path: "products", element: <ProductsPage /> },
         // { path: "blog", element: <BlogPage /> },
       ],
@@ -29,10 +30,10 @@ export default function Routes() {
     //     { path: "*", element: <Navigate to="/404" /> },
     //   ],
     // },
-    // {
-    //   path: "*",
-    //   element: <Navigate to="/404" replace />,
-    // },
+    {
+      path: "*",
+      element: <DashboardLayout />,
+    },
   ]);
 
   return routes;
