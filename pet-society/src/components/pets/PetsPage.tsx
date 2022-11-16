@@ -9,21 +9,21 @@ const PETS: Array<PetObject> = [
     id: "1",
     date: new Date().toDateString(),
     imgSrc:
-      "https://raw.githubusercontent.com/shiross/shiro/main/shiroapp/assets/img/drago.jpg?token=GHSAT0AAAAAABXU67LIYPYHAMROWZI2XIMIY3DZYLQ",
+      "https://yt3.ggpht.com/vVVWerGtDv_ZfARjjW_5yYovuLU3IDUTX1WHGONKGm2Nh0nSVnQypzF8WqpjWntClKJh4inFww=s900-c-k-c0x00ffffff-no-rj",
     name: "draco",
   },
   {
     id: "2",
     date: new Date().toDateString(),
     imgSrc:
-      "https://raw.githubusercontent.com/shiross/shiro/main/shiroapp/assets/img/drago.jpg?token=GHSAT0AAAAAABXU67LIYPYHAMROWZI2XIMIY3DZYLQ",
+      "https://yt3.ggpht.com/vVVWerGtDv_ZfARjjW_5yYovuLU3IDUTX1WHGONKGm2Nh0nSVnQypzF8WqpjWntClKJh4inFww=s900-c-k-c0x00ffffff-no-rj",
     name: "Shiroksy",
   },
   {
     id: "3",
     date: new Date().toDateString(),
     imgSrc:
-      "https://raw.githubusercontent.com/shiross/shiro/main/shiroapp/assets/img/drago.jpg?token=GHSAT0AAAAAABXU67LJOGVF4CWTSNLIVFOGY3D2M7A",
+      "https://yt3.ggpht.com/vVVWerGtDv_ZfARjjW_5yYovuLU3IDUTX1WHGONKGm2Nh0nSVnQypzF8WqpjWntClKJh4inFww=s900-c-k-c0x00ffffff-no-rj",
     name: "tuu",
   },
 ];

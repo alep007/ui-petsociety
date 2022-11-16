@@ -1,20 +1,27 @@
-import { ThemeProvider as MUIThemeProvider, createTheme, StyledEngineProvider, alpha } from "@mui/material/styles";
+import { useMemo } from "react";
+import { ThemeProvider as MUIThemeProvider, createTheme, StyledEngineProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import palette from "./palette";
 import ComponentsOverrides from "./overrides";
 import customShadows from "./customShadows";
+import shadows from "./shadows";
+import GlobalStyles from "./globalStyles";
 
 const ThemeProvider = ({ children }: any) => {
-  // A custom theme for this app
-  const theme = createTheme({
-    typography: {
-      fontFamily: "Poppins",
-    },
-    palette: palette,
-    //@ts-ignore
-    customShadows: customShadows(),
-    components: {},
-  });
+  const themeOptions = useMemo(
+    () => ({
+      palette,
+      shape: { borderRadius: 6 },
+      typography: {
+        fontFamily: "Poppins",
+      },
+      shadows: shadows(),
+      customShadows: customShadows(),
+    }),
+    [],
+  );
+  // @ts-ignore
+  const theme = createTheme(themeOptions);
 
   theme.components = ComponentsOverrides(theme);
 
@@ -22,6 +29,7 @@ const ThemeProvider = ({ children }: any) => {
     <StyledEngineProvider injectFirst>
       <MUIThemeProvider theme={theme}>
         <CssBaseline />
+        <GlobalStyles />
         {children}
       </MUIThemeProvider>
     </StyledEngineProvider>
