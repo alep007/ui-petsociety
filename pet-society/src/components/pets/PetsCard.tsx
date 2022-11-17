@@ -22,7 +22,7 @@ const StyledProductImg = styled("img")({
 
 const PetsCard = ({ key, pet }: PetCardProps) => {
   return (
-    <Grid item xs={12} sm={6} md={3}>
+    <Grid key={key} item xs={12} sm={6} md={3}>
       <Card>
         <Box sx={{ pt: "100%", position: "relative" }}>
           <StyledProductImg alt={pet.name} src={pet.imgSrc} loading={"lazy"} />

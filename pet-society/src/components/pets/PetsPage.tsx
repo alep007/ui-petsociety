@@ -1,7 +1,8 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import AddNewPet from "./AddNewPet";
 import PetsCard, { PetObject } from "./PetsCard";
 
 const PETS: Array<PetObject> = [
@@ -40,9 +41,8 @@ const PetsPage = () => {
           <Typography variant="h4" gutterBottom>
             Pets
           </Typography>
-          <Button variant="contained">Add new pet</Button>
+          <AddNewPet />
         </Stack>
-
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
           {/* <BlogPostsSearch posts={POSTS} />
           <BlogPostsSort options={SORT_OPTIONS} /> */}
